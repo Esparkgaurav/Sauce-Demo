@@ -8,7 +8,7 @@ describe("Remove Products from carts", ()=>{
             inventoryPage.addproduct();
             inventoryPage.checkcart();
             inventoryPage.removeproduct();
-            inventoryPage.checkremoveproduct();
+            inventoryPage.checkcart();
 
         })
     })

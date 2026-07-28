@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-07-28T09:34:41.237Z",
+    "end": "2026-07-28T09:34:42.451Z",
+    "duration": 1214,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fe4e381e-9551-4cc8-83df-8063e9221406",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Removeproduct.cy.js",
+      "file": "cypress\\e2e\\Removeproduct.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "73f8bd66-322d-4397-be03-a4dc91d9a63b",
+          "title": "Remove Products from carts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify product remove sucessfully",
+              "fullTitle": "Remove Products from carts Verify product remove sucessfully",
+              "timedOut": null,
+              "duration": 1171,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('user').then(user => {\n  cy.login(user.username, user.password);\n  inventoryPage.addproduct();\n  inventoryPage.checkcart();\n  inventoryPage.removeproduct();\n  inventoryPage.checkremoveproduct();\n});",
+              "err": {},
+              "uuid": "f1ba47e0-1d4d-4e4f-abd8-12e780f431d2",
+              "parentUUID": "73f8bd66-322d-4397-be03-a4dc91d9a63b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f1ba47e0-1d4d-4e4f-abd8-12e780f431d2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1171,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

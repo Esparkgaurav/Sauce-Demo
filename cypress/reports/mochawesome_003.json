@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-07-28T09:34:49.954Z",
+    "end": "2026-07-28T09:34:52.247Z",
+    "duration": 2293,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0de1f378-0b2f-48df-aa10-3ba03557f38b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\invalidCredetials.cy.js",
+      "file": "cypress\\e2e\\invalidCredetials.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4392ecd6-b8d5-4c04-98ba-90121099185b",
+          "title": "Invalid Credentials",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Error Message when Inavalid Credentials",
+              "fullTitle": "Invalid Credentials Verify Error Message when Inavalid Credentials",
+              "timedOut": null,
+              "duration": 2254,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('invalidUser').then(invalidUser => {\n  cy.login(invalidUser.username, invalidUser.password);\n  cy.contains(\"Epic sadface: Username and password do not match any user in this service\").should(\"be.visible\");\n});",
+              "err": {},
+              "uuid": "28476e00-8d6d-4966-adc7-54a90a6d901e",
+              "parentUUID": "4392ecd6-b8d5-4c04-98ba-90121099185b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "28476e00-8d6d-4966-adc7-54a90a6d901e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2254,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

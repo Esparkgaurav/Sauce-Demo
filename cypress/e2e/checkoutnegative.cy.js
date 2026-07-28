@@ -14,7 +14,7 @@ describe("Checkout Negative", ()=>{
             inventorypage.addproduct();
             inventorypage.clickcartbadge();
             yourcartpage.clickcheckoutbtn();
-            checkoutpage.enterinfo();
+            checkoutpage.enterinfo(" "," "," ");
             checkoutpage.clickcontinubtn();
             checkoutpage.withoutinfo();
             

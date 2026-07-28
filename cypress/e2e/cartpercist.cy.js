@@ -9,7 +9,7 @@ describe("Cart Percist", ()=>{
             inventorypage.addproduct();
             inventorypage.clicklogoutbtn();
             cy.login(user.standardUser.username, user.standardUser.password);
-            inventorypage.checkremoveproduct();
+            inventorypage.checkcart();
             
         })
     })

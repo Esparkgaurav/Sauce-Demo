@@ -5,7 +5,9 @@ on: [push, pull_request]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    timeout-minutes: 15   # ✅ prevent infinite runs
+    timeout-minutes: 15
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true   # ✅ allow Node 18/20
 
     steps:
       - name: Checkout code
@@ -14,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.18.0   # ✅ stable version for Cypress
+          node-version: 18.18.0   # ✅ avoids Node 24 issues
 
       - name: Install dependencies
         run: npm install

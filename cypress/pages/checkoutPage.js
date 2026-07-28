@@ -8,6 +8,10 @@ class checkoutPage {
     clickcontinubtn(){
         cy.get("#continue").click();
     }
+
+    withoutinfo() {
+        cy.contains("Error: First Name is required").should("be.visible");
+    }
 }
 
 export default checkoutPage;

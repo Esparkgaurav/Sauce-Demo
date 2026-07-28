@@ -4,7 +4,7 @@ describe("Test Inventory Page", ()=>{
             cy.login(user.username, user.password);
             cy.url().should("include","inventory.html");
             cy.get(".inventory_item").should("have.length.at.least", 6);
-            cy.contains("India").should("be.visible");
+            cy.contains("Products").should("be.visible");
         })
     })
 })

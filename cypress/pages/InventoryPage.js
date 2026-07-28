@@ -16,6 +16,10 @@ class InventoryPage {
             cy.get(".shopping_cart_badge").should("not.exist");
         }
 
+        clickcartbadge(){
+            cy.get(".shopping_cart_link").click();
+        }
+
 }
 
 export default InventoryPage;

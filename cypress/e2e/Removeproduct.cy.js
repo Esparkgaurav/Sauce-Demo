@@ -4,7 +4,7 @@ const inventoryPage = new InventoryPage();
 describe("Remove Products from carts", ()=>{
     it("Verify product remove sucessfully", ()=>{
         cy.fixture('user').then((user)=>{
-            cy.login(user.username, user.password);
+            cy.login(user.standardUser.username, user.standardUser.password);
             inventoryPage.addproduct();
             inventoryPage.checkcart();
             inventoryPage.removeproduct();

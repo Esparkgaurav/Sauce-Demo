@@ -7,41 +7,51 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout your code
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Verify Cypress binary
-        run: npx cypress verify
-
+      # Install dependencies
       - name: Install dependencies
         run: npm install
 
+      # Verify Cypress binary (fixes "Permission denied" issue)
+      - name: Verify Cypress
+        run: npx cypress verify
+
+      # Run Cypress tests
       - name: Run Cypress tests
         run: npm run cypress:run
 
+      # Merge JSON reports
       - name: Merge reports
         run: npm run merge:reports
 
+      # Generate single HTML report with timestamp
       - name: Generate HTML report
         run: npm run generate:report
 
+      # Upload combined report
       - name: Upload reports
         uses: actions/upload-artifact@v4
         with:
           name: cypress-report
           path: cypress/reports/
 
+      # Upload screenshots
       - name: Upload screenshots
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
           path: cypress/screenshots/
 
+      # Upload videos
       - name: Upload videos
         uses: actions/upload-artifact@v4
         with:

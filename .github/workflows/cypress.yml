@@ -21,19 +21,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Verify Cypress binary (fixes "Permission denied" issue)
-      - name: Verify Cypress
-        run: npx cypress verify
-
-      # Run Cypress tests
+      # Run Cypress tests using official action
       - name: Run Cypress tests
-        run: npm run cypress:run
+        uses: cypress-io/github-action@v6
+        with:
+          command: npm run cypress:run
 
       # Merge JSON reports
       - name: Merge reports
         run: npm run merge:reports
 
-      # Generate single HTML report with timestamp
+      # Generate single HTML report
       - name: Generate HTML report
         run: npm run generate:report
 

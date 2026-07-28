@@ -11,7 +11,7 @@ const checkoutreviewpage = new checkoutoverviewPage();
 describe("Checkout Page", ()=> {
     it("Verify checkout sucessful", ()=>{
         cy.fixture('user').then((user)=>{
-            cy.login(user.username, user.password);
+            cy.login(user.standardUser.username, user.standardUser.password);
             inventorypage.addproduct();
             inventorypage.clickcartbadge();
             yourcartpage.clickcheckoutbtn();

@@ -10,7 +10,7 @@ const checkoutpage = new checkoutPage();
 describe("Checkout Negative", ()=>{
     it("Verify negative checkout scenario", ()=>{
         cy.fixture('user').then((user)=>{
-            cy.login(user.username, user.password);
+            cy.login(user.standardUser.username, user.standardUser.password);
             inventorypage.addproduct();
             inventorypage.clickcartbadge();
             yourcartpage.clickcheckoutbtn();
